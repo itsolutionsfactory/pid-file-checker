@@ -2,7 +2,7 @@ stages:
   - test
 
 variables:
-  PRE_COMMIT_IMAGE: $CI_REGISTRY/docker/pre-commit:latest
+  PRE_COMMIT_IMAGE: nexus.itsf.io:5005/docker/pre-commit:latest
 
 tests:
   stage: test
