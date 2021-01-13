@@ -1,0 +1,25 @@
+stages:
+  - test
+
+variables:
+  PRE_COMMIT_IMAGE: $CI_REGISTRY/docker/pre-commit:latest
+
+tests:
+  stage: test
+  image: nexus.itsf.io:5005/python:3.7.9-buster
+  variables:
+    POETRY_VERSION: 1.1.4
+  before_script:
+    - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+    - source $HOME/.poetry/env
+    - PYTHONPATH=$PYTHONPATH:$HOME/.poetry/lib
+    - export PYTHONPATH
+  script:
+    - poetry install
+    - poetry run pytest -Werror --color=yes
+
+pre_commit:
+  stage: test
+  image: $PRE_COMMIT_IMAGE
+  script:
+    - pre-commit run --all-files --color always --show-diff-on-failure

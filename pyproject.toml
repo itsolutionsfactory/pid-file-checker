@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pid-file-checker"
+version = "0.1.0"
+description = ""
+authors = ["Gabriel Augendre <gabriel@augendre.info>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+psutil = "^5.8.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pre-commit = "^2.9.3"
+
+[tool.poetry.scripts]
+pfc = 'pid_file_checker.checker:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
