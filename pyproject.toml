@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "pid-file-checker"
-version = "0.1.1"
-description = ""
+version = "0.1.2"
+description = "Monitor a pid file"
+readme = "README.md"
 authors = ["Gabriel Augendre <gabriel@augendre.info>"]
+homepage = "https://git.itsf.io/it4nw/pid-file-checker"
 
 [tool.poetry.dependencies]
 python = "^3.7"
