@@ -11,11 +11,12 @@ logger = logging.getLogger(__name__)
 
 def main():
     parser = ArgumentParser(
-        "Check for the presence of a pid file.\n"
+        description="Check for the presence of a pid file. "
         "The file must contain one and only one integer "
         "which must be the pid of a running process. "
-        "Otherwise, return a code != 0.\n"
-        "Meant to be used in a healthcheck context like with Docker or Kubernetes."
+        "Otherwise, return a code != 0. "
+        "Meant to be used in a healthcheck context like with Docker or Kubernetes.",
+        epilog="Brought to you by IT4NW.",
     )
     parser.add_argument(
         "pid_file",
