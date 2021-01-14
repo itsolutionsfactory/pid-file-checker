@@ -1,7 +1,7 @@
 # pid-file-checker
 
 ```
-$ pfc --help                                                                                                                                                                                                                              2021-01-13 15:51:34
+$ pfc --help
 usage: pfc [-h] pid_file
 
 Check for the presence of a pid file. The file must contain one and only one
