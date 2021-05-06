@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pid-file-checker"
-version = "0.1.3"
+version = "1.0.0"
 description = "Monitor a pid file"
 readme = "README.md"
 authors = ["Gabriel Augendre <gabriel@augendre.info>"]
