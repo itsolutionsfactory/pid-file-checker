@@ -16,7 +16,7 @@ def main():
         "which must be the pid of a running process. "
         "Otherwise, return a code != 0. "
         "Meant to be used in a healthcheck context like with Docker or Kubernetes.",
-        epilog="Brought to you by IT4NW.",
+        epilog="Brought to you by IT4NW@ITSF.",
     )
     parser.add_argument(
         "pid_file",
