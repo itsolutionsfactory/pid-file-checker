@@ -17,3 +17,9 @@ optional arguments:
 
 Brought to you by IT4NW@ITSF.
 ```
+
+## Installation
+
+```bash
+python -m pip install pid-file-checker
+```
